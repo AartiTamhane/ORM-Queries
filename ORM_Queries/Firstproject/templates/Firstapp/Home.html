@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<br><br>
+{% if stu_objs|length == 0 %}
+<h1>No Data is available to Display</h1>
+
+{% else %}
+    <table border="1" align="center" bgcolor="#DC2053">
+
+
+    <tr>
+        <th>Rn</th>
+        <th>Name</th>
+        <th>Marks</th>
+    </tr>
+{% for stu in stu_objs %}
+    <tr>
+        <td>{{stu.rn}}</td>
+        <td>{{stu.name}}</td>
+        <td>{{stu.marks}}</td>
+
+    </tr>
+{% endfor %}
+        {% endif %}
+    </table>
+</body>
+</html>
